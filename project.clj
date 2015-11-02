@@ -10,5 +10,7 @@
   :codox {:src-dir-uri "https://github.com/Raynes/fs/blob/master/"
           :src-linenum-anchor-prefix "L"
           :defaults {:doc/format :markdown}}
-  :deploy-repositories {"releases" :clojars}
+  :deploy-repositories {"releases" {:url "s3p://chartbeat-jars/releases/"
+                                    :sign-releases false}}
+  :aot :all
   :profiles {:dev {:dependencies [[midje "1.6.3"]]}})
